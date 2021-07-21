@@ -1,6 +1,6 @@
-export default class Response {
+export default class Reply {
     url: string
     status: number
     statusText: string
-    html: string
+    data: Document
 }

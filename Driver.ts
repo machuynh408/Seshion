@@ -1,4 +1,12 @@
 import Session from "./Session"
 
 let sess = new Session()
-sess.get("")
+
+let script = async () => {
+    var res = await sess.get("https://shop-usa.palaceskateboards.com/")
+    .then((x) => x)
+    console.log(res.url)
+    console.log(res.data.body.innerHTML)
+}
+
+script()
