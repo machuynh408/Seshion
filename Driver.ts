@@ -1,12 +1,15 @@
+import Reply from "./Reply"
 import Session from "./Session"
 
 let sess = new Session()
 
-let script = async () => {
-    var res = await sess.get("https://shop-usa.palaceskateboards.com/")
-    .then((x) => x)
-    console.log(res.url)
-    console.log(res.data.body.innerHTML)
+let print = (input: Reply) => {
+    if (!Settings.ENABLE_LOG) {
+        return
+    }
+    console.log(`[Reply/${input.status}]: ${input.url}`)
 }
 
-script()
+// Script
+(async () => {
+})()
